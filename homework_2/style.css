@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  list-style-type: none;
+  text-align: center;
+}
+.menu li {
+  display: inline;
+  margin: 25.5px;
+  text-transform: uppercase;
+}
+.menu li a {
+  text-decoration: none;
+  color: #ff0000;
+}
+.title-page {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 48px;
+}
+.main-text {
+  text-align: center;
+}
+.first-p {
+  margin-top: 38px;
+}
+.second-p {
+  margin-top: 28px;
+}
+#rectangle {
+  width: 220px;
+  height: 120px;
+  background: #ff0000;
+}
