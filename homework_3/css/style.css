@@ -14,10 +14,12 @@ body {
   font-size: 80px;
   line-height: 94px;
 }
+
 .logo-link {
   text-decoration: none;
   color: #000;
 }
+
 .logo-link:visited {
   color: #000;
 }
@@ -33,11 +35,13 @@ body {
   align-items: center;
   background: #35444f;
 }
+
 .menu-item {
   border-right-style: solid;
   border-right-color: #ffffff;
   border-right-width: 1px;
 }
+
 .menu-item:first-child {
   border-left-style: solid;
   border-left-color: #ffffff;
@@ -52,9 +56,11 @@ body {
   line-height: 28px;
   padding: 26px 39px;
 }
+
 .menu-item-link:visited {
   color: #fff;
 }
+
 .menu-item:hover {
   background-color: #222f3a;
 }
@@ -80,6 +86,7 @@ body {
   color: #485863;
   text-decoration: none;
 }
+
 .sidebar-item-link:visited {
   color: #485863;
 }
@@ -94,6 +101,7 @@ body {
 .content-area {
   width: 885px;
 }
+
 .image-area {
   margin-top: 50px;
   width: 885px;
@@ -101,6 +109,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.main-image {
+  transition: 1s;
+  display: block;
+}
+
+.main-image:hover {
+  transform: scale(1.2);
 }
 
 .text-content-area {
@@ -109,9 +127,11 @@ body {
   line-height: 24px;
   margin-bottom: 34px;
 }
+
 .page-area {
   display: flex;
 }
+
 .footer-area {
   background-color: rgba(99, 105, 110, 0.48);
   display: flex;
@@ -128,6 +148,7 @@ body {
   height: 69px;
   margin-bottom: 30px;
 }
+
 .bottom-menu-item-link {
   display: block;
   font-size: 28px;
@@ -135,6 +156,7 @@ body {
   color: #0c1927;
   text-decoration: none;
 }
+
 .bottom-copyright {
   display: flex;
   justify-content: center;
@@ -146,6 +168,7 @@ body {
   line-height: 24px;
   color: #010101;
 }
+
 .bottom-menu-item-link:visited {
   color: #0c1927;
 }
