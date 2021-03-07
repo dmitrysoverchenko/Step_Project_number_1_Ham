@@ -47,7 +47,7 @@ body {
   display: flex;
 }
 
-.menu a {
+.menu ul li a {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
@@ -60,21 +60,145 @@ body {
   margin: 0 18px;
 }
 
-/* Правильно ли я понял цифры из макета?
- .menu a:hover {
+.menu ul li a:visited {
+  color: #fff;
+}
+
+.menu ul li:first-child a {
+  color: #14b9d5;
+}
+
+.menu ul li a:hover {
   font-weight: bold;
   font-size: 22px;
   line-height: 30px;
+  color: #ff0000;
 }
-*/
-/* не работает 
-.menu ul li:first-child {
-color: #14B9D5;
-}
-*/
-/* Почему не работает? 
+
 .header-bottom {
   height: 369px;
-  background: url("./img/news.jpeg");
+  background: url("../img/news.jpeg");
 }
-*/
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  padding: 164px 173px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 37px;
+  color: #fff;
+  margin-bottom: 44px;
+}
+
+.button-subscribe-now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 170px;
+  height: 55px;
+  background: #89ca62;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  margin-right: 20px;
+}
+.button-subscribe-now a {
+  color: #fff;
+}
+.button-subscribe-now a:visited {
+  color: #fff;
+}
+
+.button-best-articles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 170px;
+  height: 55px;
+  color: #fff;
+  background: #14b9d5;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+.button-best-articles a {
+  /*надо сделать всю кнопку ссылкой*/
+  color: #fff;
+}
+.button-best-articles a:visited {
+  color: #fff;
+}
+.button-area {
+  display: flex;
+  justify-content: center;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 37px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #18b4cf;
+  margin-bottom: 52px;
+  padding-top: 49px;
+}
+
+.popular-posts-area {
+  background: #f2f2f2; /* Как добавить +40 пикселей отступа с фоном??*/
+}
+
+.most-popular-posts {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  height: 889px;
+}
+
+.most-popular-posts figure {
+  margin-bottom: 32px;
+  margin-right: 30px;
+  background: #fff;
+}
+.most-popular-posts figure figcaption {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  margin: 22px 0;
+}
+
+.most-popular-posts figure figcaption a {
+  display: block;
+  height: 100%;
+  color: #000;
+}
+.most-popular-posts figure figcaption a:visited {
+  color: #000;
+}
+
+.most-popular-clients {
+  height: 588px;
+  background: url(../img/clients.jpeg);
+}
+
+.most-popular-clients-title {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+}
+
+.separation-line {
+  height: 3px;
+  background: #18b4cf;
+  border: none;
+  width: 60px;
+}
