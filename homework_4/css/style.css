@@ -149,7 +149,7 @@ body {
 }
 
 .popular-posts-area {
-  background: #f2f2f2; /* Как добавить +40 пикселей отступа с фоном??*/
+  background: #f2f2f2;
 }
 
 .most-popular-posts {
@@ -222,7 +222,10 @@ body {
 
 .hot-news {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, min-content);
+  margin-bottom: 71px;
+  grid-column-gap: 60px;
+  grid-row-gap: 46px;
 }
 
 .hot-news-item-link {
@@ -241,6 +244,9 @@ body {
   text-align: right;
   margin-bottom: 14px;
 }
+.figcaption-title-center {
+  text-align: center;
+}
 
 .figcaption-text {
   font-weight: 600;
@@ -248,4 +254,28 @@ body {
   line-height: 21px;
   color: #5b6469;
   text-align: right;
+}
+
+.figcaption-area {
+  background: #f9f7f7;
+}
+
+.footer-area {
+  background: #000;
+  color: #fff;
+}
+
+.footer-area-grids {
+  height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.copyright p {
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.footer-logo {
 }
