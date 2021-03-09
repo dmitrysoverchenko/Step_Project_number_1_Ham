@@ -263,6 +263,33 @@ body {
   background: #f9f7f7;
 }
 
+.hot-news-item-right {
+  display: inline-block;
+  vertical-align: center;
+}
+.figcaption-area-right {
+  width: 374px;
+  height: 259px;
+  float: right;
+}
+
+.figcaption-title-right {
+  padding-top: 41px;
+  padding-right: 24px;
+}
+.figcaption-text-right {
+  padding-bottom: 41px;
+  padding-right: 24px;
+}
+
+.hot-news-item-center {
+  display: inline-block;
+}
+
+.figcaption-area-center {
+  width: 277px;
+  height: 48px;
+}
 .footer-area {
   background: #000;
   color: #fff;
