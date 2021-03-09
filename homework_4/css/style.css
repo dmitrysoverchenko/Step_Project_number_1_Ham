@@ -126,7 +126,6 @@ body {
   line-height: 25px;
 }
 .button-best-articles a {
-  /*надо сделать всю кнопку ссылкой*/
   color: #fff;
 }
 .button-best-articles a:visited {
@@ -237,6 +236,8 @@ body {
 }
 
 .figcaption-title {
+  padding-top: 12px;
+  padding-right: 14px;
   font-weight: bold;
   font-size: 18px;
   line-height: 25px;
@@ -249,6 +250,8 @@ body {
 }
 
 .figcaption-text {
+  padding-right: 14px;
+  padding-bottom: 1px;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
@@ -269,7 +272,9 @@ body {
   height: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   align-items: center;
+  justify-content: space-between;
 }
 
 .copyright p {
@@ -278,4 +283,6 @@ body {
 }
 
 .footer-logo {
+  justify-self: end;
+  align-self: center;
 }
