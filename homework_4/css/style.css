@@ -105,10 +105,8 @@ body {
   line-height: 25px;
   margin-right: 20px;
 }
-.button-subscribe-now a {
-  color: #fff;
-}
-.button-subscribe-now a:visited {
+
+.button-subscribe-now:visited {
   color: #fff;
 }
 
@@ -125,10 +123,8 @@ body {
   font-size: 18px;
   line-height: 25px;
 }
-.button-best-articles a {
-  color: #fff;
-}
-.button-best-articles a:visited {
+
+.button-best-articles:visited {
   color: #fff;
 }
 .button-area {
