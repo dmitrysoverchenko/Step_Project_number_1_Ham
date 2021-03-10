@@ -5,7 +5,7 @@ body {
 .container {
   width: 1280px;
   margin: 0 auto;
-  padding: 0 98px;
+  /*padding: 0 98px;*/
 }
 
 .logo {
@@ -34,6 +34,7 @@ body {
   flex-wrap: nowrap;
   align-items: center;
   background: #35444f;
+  margin-bottom: 50px;
 }
 
 .menu-item {
@@ -66,8 +67,6 @@ body {
 }
 
 .sidebar {
-  margin-top: 50px;
-  margin-right: 52px;
   border: 1px solid #000;
   display: flex;
   justify-content: start;
@@ -103,13 +102,15 @@ body {
 }
 
 .image-area {
-  margin-top: 50px;
+  padding-top: 75px;
+  padding-bottom: 73px;
+  margin-bottom: 37px;
   width: 885px;
-  height: 529px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  border: 1px solid #000000;
 }
 
 .main-image {
@@ -130,6 +131,7 @@ body {
 
 .page-area {
   display: flex;
+  justify-content: space-between;
 }
 
 .footer-area {
