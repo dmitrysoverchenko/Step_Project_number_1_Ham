@@ -3,7 +3,7 @@ body {
 }
 
 .wrapper {
-  background: url(../img/background.jpg);
+  background-image: url(../img/background.jpg);
 }
 
 .container {
@@ -14,8 +14,8 @@ body {
 .top-area {
   display: flex;
   justify-content: space-between;
-  padding-top: 22px;
-  margin-bottom: 22px;
+  padding-top: 46px;
+  margin-bottom: 17px;
 }
 
 .logo {
@@ -31,6 +31,7 @@ body {
 .logo-link img {
   margin-right: 8px;
   padding-bottom: 9px;
+  /* padding-top: 5px; */
 }
 
 .logo-text {
@@ -68,9 +69,17 @@ body {
   line-height: 18px;
 }
 
+.mail:hover {
+  color: #f26522;
+}
+
 .phone {
   margin-left: auto;
   padding-top: 19px;
+}
+
+.phone:hover {
+  color: #f26522;
 }
 
 .holiday-item {
@@ -82,6 +91,7 @@ body {
   font-weight: normal;
   font-size: 18px;
   line-height: 18px;
+  position: relative;
 }
 
 .holiday-item-title {
@@ -110,4 +120,62 @@ body {
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+}
+
+.cover {
+  width: 300px;
+  /* height: 55px; /* убрать высоту, когда будет контент*/
+  background: #f26522;
+  /*display: none; */
+  position: absolute;
+  bottom: 75px;
+  /*display: flex;*/
+  display: none;
+  justify-content: space-between;
+}
+
+.holiday-item:hover .holiday-item-title {
+  color: #f26522;
+}
+
+.holiday-item:hover .cover {
+  display: flex;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-top: 7px;
+  padding-bottom: 12px;
+}
+
+.from {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+}
+
+.euro {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  padding-top: 8px;
+}
+
+.details {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  padding-top: 29px;
+}
+
+.details::after {
+  content: url(../img/Vector.png);
+  padding-right: 14px;
+  padding-left: 16px;
+  vertical-align: middle;
 }
