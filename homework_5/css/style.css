@@ -1,11 +1,76 @@
 body {
   font-family: sans-serif;
+}
+
+.wrapper {
   background: url(../img/background.jpg);
 }
 
 .container {
   width: 1030px;
   margin: 0 auto;
+}
+
+.top-area {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+  margin-bottom: 22px;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+}
+
+.logo-link img {
+  margin-right: 8px;
+  padding-bottom: 9px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.milan {
+  font-weight: bold;
+  font-size: 29px;
+  line-height: 29px;
+  color: #ffffff;
+  padding-top: 5px;
+}
+
+.holidays {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  padding-bottom: 6px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.phone {
+  margin-left: auto;
+  padding-top: 19px;
 }
 
 .holiday-item {
@@ -19,26 +84,30 @@ body {
   line-height: 18px;
 }
 
-.holiday-item img {
-  box-shadow: 0px 4px 4px 0px #000000 25 %;
-  border: 2px solid;
-  border-image-source: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
 .holiday-item-title {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 37px;
 }
 
 .content-area {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 37px;
+  justify-items: center;
+  margin-bottom: 49px; */
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-content: space-between;
+  margin-bottom: 12px;
+}
+
+.copyright {
+  padding-bottom: 15px;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
 }
