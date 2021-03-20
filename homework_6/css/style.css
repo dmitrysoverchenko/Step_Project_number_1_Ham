@@ -1,0 +1,134 @@
+body {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  /* or apply to html? https://siterost.net/post/background-image-html-css*/
+  background: url(../img/bground.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.page-header {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.page-header:hover {
+  background: #000000;
+  mix-blend-mode: normal; /* is it correct? */
+  opacity: 0.41;
+}
+
+.header-title {
+  padding: 18px 0 18px 79px;
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.logo:visited {
+  color: #fff;
+}
+
+.logo:hover {
+  color: #01813f;
+}
+
+.cal-icon:hover {
+  fill: #01813f;
+}
+
+.mail-icon:hover {
+  fill: #01813f;
+}
+
+.web-icon:hover {
+  fill: #01813f;
+}
+
+.user-data {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #fff;
+}
+
+.header-log-in {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-log-in:visited {
+  color: #fff;
+}
+
+.header-log-in:hover {
+  color: #01813f;
+}
+
+.header-sign-up {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-sign-up:visited {
+  color: #fff;
+}
+
+.header-sign-up:hover {
+  color: #01813f;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-links {
+  width: 313px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 79px;
+}
+
+.first-name {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+}
+
+.agree-terms {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #434343;
+}
+
+.agree-terms-link {
+  color: #3cb878;
+  text-decoration: none;
+}
+
+.agree-terms-link:hover {
+  color: #01813f;
+  text-decoration-line: underline;
+}
