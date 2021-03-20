@@ -4,7 +4,7 @@ body {
 
 .wrapper {
   /* or apply to html? https://siterost.net/post/background-image-html-css*/
-  background: url(../img/bground.png);
+  background: url(../img/bground.png); /*or jpg? */
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -107,13 +107,42 @@ body {
   padding-right: 79px;
 }
 
-.first-name {
+.form-input {
   font-weight: normal;
+  color: #434343;
   font-size: 14px;
   line-height: 14px;
   background: #ffffff;
   border: 1px solid #f2f2f2;
   border-radius: 4px;
+  padding: 16px 0 16px 20px;
+  margin-top: 15px;
+}
+.form-input:focus {
+  outline: none;
+  /*not working
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21); */
+}
+
+.form-button {
+  width: 324px;
+  background: rgba(60, 184, 120, 0.8);
+  border-radius: 4px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.form-button:hover {
+  background: #01813f;
+}
+
+.form-button:focus {
+  outline: none;
 }
 
 .agree-terms {
@@ -121,6 +150,7 @@ body {
   font-size: 14px;
   line-height: 14px;
   color: #434343;
+  padding-left: 8px;
 }
 
 .agree-terms-link {
@@ -131,4 +161,98 @@ body {
 .agree-terms-link:hover {
   color: #01813f;
   text-decoration-line: underline;
+}
+
+.form-wrapper {
+  width: 324px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 0 60px 38px 60px;
+}
+
+.checkbox-area {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+.separation-line {
+  padding-top: 31px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #848484;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separation-line::before,
+.separation-line::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.separation-line:not(:empty)::before {
+  margin-right: 5px;
+}
+
+.separation-line:not(:empty)::after {
+  margin-left: 5px;
+}
+
+.button-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+}
+
+.button-facebook {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  width: 160px;
+  background-color: #305db8;
+  background-image: url(../img/f.png);
+  background-repeat: no-repeat;
+  background-position: 16px 11px;
+  border: none;
+  color: #fff;
+  padding: 16px 20px 16px 66px;
+  border-radius: 4px;
+}
+
+.button-facebook:hover {
+  background-color: #022263;
+}
+
+.button-facebook:focus {
+  outline: none;
+}
+
+.button-google {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  width: 160px;
+  background-color: #df4a32;
+  background-image: url(../img/g.png);
+  background-repeat: no-repeat;
+  background-position: 14px 15px;
+  border: none;
+  padding: 16px 20px 16px 78px;
+  border-radius: 4px;
+}
+
+.button-google:hover {
+  background-color: #ab1f09;
+}
+
+.button-google:focus {
+  outline: none;
 }

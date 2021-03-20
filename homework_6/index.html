@@ -62,7 +62,7 @@
             </svg>
           </a>
           <svg
-            class="separation-line"
+            class="vertical-line"
             width="1"
             height="19"
             viewBox="0 0 1 19"
@@ -70,7 +70,7 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect
-              class="separation-line"
+              class="vertical-line"
               opacity="0.5"
               width="1"
               height="19"
@@ -85,25 +85,59 @@
         </div>
       </header>
       <main>
-        <form action="#!" class="registration">
-          <input class="first-name" type="text" placeholder="First name" />
-          <input class="last-name" type="text" placeholder="Last name" />
-          <input class="email" type="email" placeholder="Email" />
-          <input
-            class="choose-password"
-            type="password"
-            placeholder="Choose Password"
-          />
-          <input
-            class="confirm-password"
-            type="password"
-            placeholder="Confirm Password"
-          />
-          <input type="checkbox" id="agreeTerms" />
-          <label class="agree-terms" for="agreeTerms"
-            >Agree with our
-            <a class="agree-terms-link" href="#!">Terms & Conditions</a></label
-          >
+        <form action="#!" class="form-registration">
+          <div class="form-wrapper">
+            <section class="button-area">
+              <button type="button" class="button-facebook">Facebook</button>
+              <button type="button" class="button-google">Google</button>
+            </section>
+            <span class="separation-line">or</span>
+            <input
+              class="form-input"
+              type="text"
+              name="first-name"
+              id="firstName"
+              placeholder="First name"
+            />
+            <input
+              class="form-input"
+              type="text"
+              name="last-name"
+              id="lastName"
+              placeholder="Last name"
+            />
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+            />
+            <input
+              class="form-input"
+              type="password"
+              name="choose-password"
+              id="choosePassword"
+              placeholder="Choose Password"
+            />
+            <input
+              class="form-input"
+              name="confirm-password"
+              id="confirmPassword"
+              type="password"
+              placeholder="Confirm Password"
+            />
+            <div class="checkbox-area">
+              <input type="checkbox" id="agreeTerms" />
+              <label class="agree-terms" for="agreeTerms"
+                >Agree with our
+                <a class="agree-terms-link" href="#!"
+                  >Terms & Conditions</a
+                ></label
+              >
+            </div>
+            <button type="submit" class="form-button">Create Account</button>
+          </div>
         </form>
       </main>
       <footer></footer>
