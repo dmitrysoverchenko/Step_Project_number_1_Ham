@@ -1,18 +1,25 @@
 body {
-  font-family: sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .wrapper {
-  /* or apply to html? https://siterost.net/post/background-image-html-css*/
-  background: url(../img/bground.png); /*or jpg? */
+  background: url(../img/bground.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: minmax(min-content, 58px) auto;
 }
 
 .page-header {
   background: rgba(0, 0, 0, 0.4);
+}
+
+.page-main {
+  align-self: center;
+  justify-self: center;
 }
 
 .page-header:hover {
@@ -120,8 +127,7 @@ body {
 }
 .form-input:focus {
   outline: none;
-  /*not working
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21); */
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21);
 }
 
 .form-button {
@@ -169,6 +175,7 @@ body {
   flex-direction: column;
   background: #fff;
   padding: 0 60px 38px 60px;
+  position: relative;
 }
 
 .checkbox-area {
@@ -176,6 +183,51 @@ body {
   align-items: center;
   padding-top: 12px;
   padding-bottom: 20px;
+}
+
+.check-box-agree-terms:checked,
+.check-box-agree-terms:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.check-box-agree-terms:checked + label,
+.check-box-agree-terms:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  line-height: 20px;
+  padding-left: 28px;
+  cursor: pointer;
+}
+
+.check-box-agree-terms:checked + label:before,
+.check-box-agree-terms:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #f2f2f2;
+  background: rgba(0, 0, 0, 0.0001);
+}
+
+.check-box-agree-terms:checked:checked + label:after,
+.check-box-agree-terms:checked:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  width: 14px;
+  height: 7px;
+  border-radius: 1px;
+  border-left: 3px solid #3cb878;
+  border-bottom: 3px solid #3cb878;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .separation-line {
@@ -226,6 +278,26 @@ body {
   border-radius: 4px;
 }
 
+.button-area::before {
+  content: "";
+  border-left: 1px solid #0a162f;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+  height: 28px;
+  position: absolute;
+  left: 108px;
+}
+
+.button-area::after {
+  content: "";
+  border-left: 1px solid #0a162f;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+  height: 28px;
+  position: absolute;
+  left: 275px;
+}
+
 .button-facebook:hover {
   background-color: #022263;
 }
@@ -255,4 +327,62 @@ body {
 
 .button-google:focus {
   outline: none;
+}
+
+.enter-user-data {
+  padding-top: 31px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enter-sign-up {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #434343;
+  text-decoration: none;
+}
+.enter-sign-up:visited {
+  color: #434343;
+}
+
+.enter-log-in {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #3cb878;
+  text-decoration: none;
+}
+
+.enter-log-in:visited {
+  color: #3cb878;
+}
+
+.enter-log-in:hover {
+  text-decoration: underline;
+  color: #01813f;
+}
+
+.square {
+  width: 18px;
+  height: 18px;
+  background-color: #3cb878;
+  position: absolute;
+  left: 0;
+}
+
+::-webkit-input-placeholder {
+  color: #bebebe;
+}
+
+:-moz-placeholder {
+  color: #bebebe;
+}
+::-moz-placeholder {
+  color: #bebebe;
+}
+
+:-ms-input-placeholder {
+  color: #bebebe;
 }
