@@ -33,25 +33,26 @@ p {
   text-align: justify;
 }
 
-.crawl {
+.star-wars-animation {
   position: relative;
   top: 9999px;
   transform-origin: 50% 100%;
-  animation: crawl 30s linear;
+  animation: star-wars-animation 30s linear;
   animation-iteration-count: infinite;
 }
 
-.crawl > .title {
+.star-wars-episode {
   font-size: 90%;
   text-align: center;
 }
 
-.crawl > .title h1 {
+.star-wars-title {
   margin: 0 0 100px;
   text-transform: uppercase;
+  text-align: center;
 }
 
-@keyframes crawl {
+@keyframes star-wars-animation {
   0% {
     top: 0;
     transform: rotateX(20deg) translateZ(0);
