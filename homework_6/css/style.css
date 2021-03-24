@@ -3,10 +3,7 @@ body {
 }
 
 .wrapper {
-  background: url(../img/bground.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  background: url(../img/bground.png) fixed center center no-repeat;
   background-size: cover;
   height: 100vh;
   display: grid;
@@ -20,12 +17,6 @@ body {
 .page-main {
   align-self: center;
   justify-self: center;
-}
-
-.page-header:hover {
-  background: #000000;
-  mix-blend-mode: normal; /* is it correct? */
-  opacity: 0.41;
 }
 
 .header-title {
@@ -49,15 +40,15 @@ body {
   color: #01813f;
 }
 
-.cal-icon:hover {
+.cal:hover .cal-icon {
   fill: #01813f;
 }
 
-.mail-icon:hover {
+.mail:hover .mail-icon {
   fill: #01813f;
 }
 
-.web-icon:hover {
+.web:hover .web-icon {
   fill: #01813f;
 }
 
@@ -115,6 +106,7 @@ body {
 }
 
 .form-input {
+  width: 304px;
   font-weight: normal;
   color: #434343;
   font-size: 14px;
@@ -267,15 +259,15 @@ body {
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
-  width: 160px;
   background-color: #305db8;
   background-image: url(../img/f.png);
   background-repeat: no-repeat;
   background-position: 16px 11px;
   border: none;
   color: #fff;
-  padding: 16px 20px 16px 66px;
+  padding: 17px 22px 17px 67px;
   border-radius: 4px;
+  text-decoration: none;
 }
 
 .button-area::before {
@@ -286,6 +278,7 @@ body {
   height: 28px;
   position: absolute;
   left: 108px;
+  text-decoration: none;
 }
 
 .button-area::after {
@@ -296,6 +289,10 @@ body {
   height: 28px;
   position: absolute;
   left: 275px;
+}
+
+.button-facebook:visited {
+  color: #fff;
 }
 
 .button-facebook:hover {
@@ -311,14 +308,18 @@ body {
   font-size: 16px;
   line-height: 16px;
   color: #fff;
-  width: 160px;
   background-color: #df4a32;
   background-image: url(../img/g.png);
   background-repeat: no-repeat;
   background-position: 14px 15px;
   border: none;
-  padding: 16px 20px 16px 78px;
+  padding: 17px 27px 17px 80px;
   border-radius: 4px;
+  text-decoration: none;
+}
+
+.button-google:visited {
+  color: #fff;
 }
 
 .button-google:hover {
