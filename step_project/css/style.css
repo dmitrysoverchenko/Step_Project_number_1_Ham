@@ -78,12 +78,16 @@ body {
 }
 
 /*
-.menu-item::after {
+.menu-item-link::after {
   display: flex;
   content: "";
   border-bottom: 2px solid #18cfab;
 }
 */
+
+.menu-item-link:hover {
+  color: #18cfab;
+}
 
 .banner-title {
   text-transform: uppercase;
@@ -309,25 +313,24 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.our-amazing-work-grid-hover {
-  display: grid;
-  /*display: none;*/
-  grid-template-columns: repeat(4, 1fr);
+.our-amazing-work-grid-item {
+  position: relative;
 }
 
 .our-amazing-work-grid-item-hover {
   width: 290px;
-  height: 210px;
+  height: 212px;
   background: #e9edef;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  /*display: none;*/
+  position: absolute;
+  top: 0;
+  display: none;
 }
 
-/*.our-amazing-work-grid-item:hover .our-amazing-work-grid-item-hover {
+.our-amazing-work-grid-item:hover .our-amazing-work-grid-item-hover {
   display: flex;
-}*/
+}
 
 .our-amazing-work-hover-link-area {
   padding-top: 48px;
