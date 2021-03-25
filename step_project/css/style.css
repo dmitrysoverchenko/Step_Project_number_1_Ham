@@ -1,0 +1,150 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.banner-wrapper {
+  background: url(../img/sections-background/section-1.jpg) fixed center center
+    no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.site-header {
+  background: rgba(94, 93, 88, 0.6);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  position: relative;
+  font-size: 32px;
+  line-height: 48px;
+  width: 220px;
+}
+
+.logo-letter {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 31px;
+  position: absolute;
+  left: 13px;
+}
+
+.logo-text {
+  padding-left: 6px;
+}
+
+.text-accent {
+  color: #18cfab;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item,
+.menu-search {
+  padding-left: 21px;
+}
+
+.menu-item-link {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.menu-item-link:visited {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*
+.menu-item::after {
+  display: flex;
+  content: "";
+  border-bottom: 2px solid #18cfab;
+}
+*/
+
+.banner-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 35px;
+  color: #fff;
+  text-align: center;
+  padding-top: 264px;
+}
+
+.banner-slogan {
+  font-weight: bold;
+  font-size: 78px;
+  line-height: 78px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  padding-top: 22px;
+}
+
+.banner-appeal {
+  color: #d4d4d4;
+  font-size: 35px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: 22px;
+}
+
+.banner-button-area {
+  padding-top: 134px;
+  padding-bottom: 243px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-now,
+.purchase-now {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 32px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.explore-now,
+.purchase-now:visited {
+  color: #fff;
+}
+
+.explore-now {
+  padding: 16px 17px;
+  background: #18cfab;
+  margin-right: 13px;
+}
+
+.purchase-now {
+  padding: 16px 12px;
+  background: #00cbf6;
+  margin-left: 13px;
+}
