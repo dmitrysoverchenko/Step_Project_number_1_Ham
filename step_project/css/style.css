@@ -523,14 +523,85 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 44px;
 }
 
 .button-back {
   padding: 8px 12px 8px 11px;
   border: 1px solid #bbb;
+  margin-right: 25px;
 }
 
 .button-forward {
-  padding: 8px 11px 8px 12px;
   border: 1px solid #bbb;
+  padding: 8px 11px 8px 12px;
+  margin-left: 25px;
+}
+
+.button-back:hover,
+.button-forward:hover {
+  background-color: #18cfab;
+}
+
+.button-back:hover .button-back-color {
+  fill: #fff;
+}
+
+.button-forward:hover .button-forward-color {
+  fill: #fff;
+}
+
+/*
+.other-quotes-author:hover {
+  padding-bottom: 20px;
+}
+*/
+
+.gal-8 {
+  display: flex;
+  width: 363px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gal-8 img {
+  margin-bottom: 2px;
+}
+
+.gal-7 {
+  width: 363px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.gallery {
+  height: 950px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.gallery-image {
+  margin-bottom: 20px;
+}
+
+.site-footer {
+  background: #22353f;
+}
+
+.site-footer p {
+  color: #aeaeae;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  padding: 47px 0;
+}
+
+.text-accent-not-bold {
+  color: #18cfab;
 }
