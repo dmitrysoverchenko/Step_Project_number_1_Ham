@@ -409,11 +409,6 @@ a.our-services-menu-item-link:focus::after {
   left: 20px;
 }
 
-.post-item img {
-  /*padding-bottom: 10px;*/
-  /*border: 1px solid #f2f4f5;*/
-}
-
 .post-item {
   font-weight: 300;
   font-size: 14px;
@@ -427,7 +422,6 @@ a.our-services-menu-item-link:focus::after {
 .post-item-description {
   width: 263px;
   background: #f8fcfe;
-  /*border: 1px solid #f2f4f5;*/
 }
 
 .post-item-title {
@@ -438,7 +432,6 @@ a.our-services-menu-item-link:focus::after {
 }
 
 .post-author {
-  /* padding-top: 10px;*/
   display: flex;
   justify-content: center;
   align-items: center;
