@@ -598,6 +598,7 @@ a.our-services-menu-item-link:focus::after {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-between;
+  padding-bottom: 83px;
 }
 
 .gallery-image {
