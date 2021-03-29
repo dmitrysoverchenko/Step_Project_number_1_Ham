@@ -24,6 +24,6 @@ if (userAge >= 18 && userAge <= 22) {
   }
 }
 
-if (userAge > 23) {
+if (userAge >= 23) {
   alert("Welcome, " + userName);
 }
