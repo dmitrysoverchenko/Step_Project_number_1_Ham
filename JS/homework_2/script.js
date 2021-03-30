@@ -30,7 +30,7 @@ while (
 ) {
   userNumber = prompt("Enter your number");
 }
-for (let i = 0; i <= userNumber; i++) {
+for (let i = 1; i <= userNumber; i++) {
   if (i % 5 === 0) {
     numbersFound = true;
     console.log(i);
