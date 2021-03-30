@@ -79,6 +79,8 @@ body {
 
 .menu-item-link:hover {
   color: #18cfab;
+  padding-bottom: 48px;
+  border-bottom: 2px solid #18cfab;
 }
 
 .banner-title {
