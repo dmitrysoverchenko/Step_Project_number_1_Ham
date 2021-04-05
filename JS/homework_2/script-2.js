@@ -48,11 +48,11 @@ let nNumber = prompt("Enter n number");
 
 while (
   Number.isInteger(+mNumber) === false ||
-  isNaN(+mNumber) ||
+  isNaN(mNumber) ||
   mNumber === "" ||
   mNumber === null ||
   Number.isInteger(+nNumber) === false ||
-  isNaN(+nNumber) ||
+  isNaN(nNumber) ||
   nNumber === "" ||
   nNumber === null
 ) {

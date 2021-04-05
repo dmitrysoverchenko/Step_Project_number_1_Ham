@@ -20,22 +20,22 @@
 // }
 
 let userNumber = prompt("Enter your number");
-let numbersFound = false;
 
 while (
   Number.isInteger(+userNumber) === false ||
-  isNaN(+userNumber) ||
+  isNaN(userNumber) ||
   userNumber === "" ||
   userNumber === null
 ) {
   userNumber = prompt("Enter your number");
 }
-for (let i = 1; i <= userNumber; i++) {
-  if (i % 5 === 0) {
-    numbersFound = true;
-    console.log(i);
+
+if (userNumber > 4) {
+  for (let i = 5; i <= userNumber; i += 5) {
+    if (i % 5 === 0) {
+      console.log(i);
+    }
   }
-}
-if (!numbersFound) {
+} else {
   console.log(`Sorry, no numbers`);
 }
