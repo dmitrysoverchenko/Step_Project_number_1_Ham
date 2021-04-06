@@ -16,7 +16,7 @@ while (
   secondNumber = prompt("Enter second number", secondNumber);
 }
 
-const calcOperation = function (firstNumber, secondNumber, mathOperation) {
+const calc = function (firstNumber, secondNumber, mathOperation) {
   let result;
   if (mathOperation === "*") {
     result = +firstNumber * +secondNumber;
@@ -39,4 +39,4 @@ const calcOperation = function (firstNumber, secondNumber, mathOperation) {
   }
 };
 
-calcOperation(firstNumber, secondNumber, mathOperation);
+calc(firstNumber, secondNumber, mathOperation);
