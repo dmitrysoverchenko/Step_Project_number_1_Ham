@@ -16,27 +16,22 @@ while (
   secondNumber = prompt("Enter second number", secondNumber);
 }
 
-const calc = function (firstNumber, secondNumber, mathOperation) {
-  let result;
-  if (mathOperation === "*") {
-    result = +firstNumber * +secondNumber;
-    console.log(result);
-    return result;
-  } else if (mathOperation === "/") {
-    result = +firstNumber / +secondNumber;
-    console.log(result);
-    return result;
-  } else if (mathOperation === "+") {
-    result = +firstNumber + +secondNumber;
-    console.log(result);
-    return result;
-  } else if (mathOperation === "-") {
-    result = +firstNumber - +secondNumber;
-    console.log(result);
-    return result;
-  } else {
-    console.log(`Sorry, "` + mathOperation + `" is not math operation`);
+const calc = function (n1, n2, operation) {
+  switch (operation) {
+    case "*":
+      return +n1 * +n2;
+      break;
+    case "/":
+      return +n1 / +n2;
+      break;
+    case "+":
+      return +n1 + +n2;
+      break;
+    case "-":
+      return +n1 - +n2;
+    default:
+      return console.log(`Sorry, "` + operation + `" is not a math operation`);
   }
 };
 
-calc(firstNumber, secondNumber, mathOperation);
+console.log(calc(firstNumber, secondNumber, mathOperation));
