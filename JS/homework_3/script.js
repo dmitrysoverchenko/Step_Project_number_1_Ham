@@ -17,10 +17,10 @@ while (
 }
 
 if (
-  mathOperation == "+" ||
-  mathOperation == "-" ||
-  mathOperation == "*" ||
-  mathOperation == "/"
+  mathOperation === "+" ||
+  mathOperation === "-" ||
+  mathOperation === "*" ||
+  mathOperation === "/"
 ) {
   const calc = function (n1, n2, operation) {
     switch (operation) {
@@ -34,7 +34,13 @@ if (
         return +n1 - +n2;
     }
   };
-  console.log(calc(firstNumber, secondNumber, mathOperation));
+  console.log(
+    firstNumber +
+      mathOperation +
+      secondNumber +
+      `=` +
+      calc(firstNumber, secondNumber, mathOperation)
+  );
 } else {
   console.log(`Sorry, "` + mathOperation + `" is not a math operation`);
 }
