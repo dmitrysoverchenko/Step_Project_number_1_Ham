@@ -5,7 +5,7 @@ function showList(list) {
   let outerArray = [];
   for (let key in list) {
     innerArray.push(list[key]);
-    outerArray = innerArray.map((word) => `<li>${word}</li>`).join("");
+    outerArray = innerArray.map((listItem) => `<li>${listItem}</li>`).join("");
   }
   document.body.innerHTML = `<ul>${outerArray}</ul>`;
 }
