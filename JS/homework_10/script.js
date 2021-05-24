@@ -1,7 +1,7 @@
 "use strict";
 
 document.getElementById("Input").addEventListener("click", clickPass);
-function clickPass() {
+function clickPass(event) {
   let input = document.getElementById("Password");
   if (input.type === "password") {
     document
@@ -13,7 +13,9 @@ function clickPass() {
     document
       .getElementById("Input")
       .classList.replace("fa-eye-slash", "fa-eye");
+    console.log(clickPass().target);
   }
+  console.log(event.target);
 }
 
 document.getElementById("repeatInput").addEventListener("click", repeatPass);

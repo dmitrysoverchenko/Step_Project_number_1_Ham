@@ -34,6 +34,7 @@ inputArea.onblur = function () {
   if (+priceValue < 0 || priceValue === "") {
     this.classList.add("red-line");
     errorText.innerText = "Enter the correct value, please";
+    priceSpan.remove();
   } else {
     this.classList.remove("red-line");
     priceSpan.innerText = `Current price is ${priceValue}`;
