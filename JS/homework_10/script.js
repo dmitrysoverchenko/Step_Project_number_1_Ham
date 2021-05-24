@@ -1,44 +1,30 @@
 "use strict";
 
-document.getElementById("Input").addEventListener("click", clickPass);
-function clickPass(event) {
-  let input = document.getElementById("Password");
-  if (input.type === "password") {
-    document
-      .getElementById("Input")
-      .classList.replace("fa-eye", "fa-eye-slash");
-    input.type = "text";
-  } else {
-    input.type = "password";
-    document
-      .getElementById("Input")
-      .classList.replace("fa-eye-slash", "fa-eye");
-    console.log(clickPass().target);
-  }
-  console.log(event.target);
-}
+document.getElementById("Password").addEventListener("click", clickPass);
+document.getElementById("repeatPassword").addEventListener("click", clickPass);
 
-document.getElementById("repeatInput").addEventListener("click", repeatPass);
-function repeatPass() {
-  let input = document.getElementById("repeatPassword");
-  if (input.type === "password") {
-    document
-      .getElementById("repeatInput")
-      .classList.replace("fa-eye", "fa-eye-slash");
-    input.type = "text";
+function clickPass(event) {
+  if (event.target.type === "password") {
+    event.target.nextElementSibling.classList.replace("fa-eye", "fa-eye-slash");
+    event.target.type = "text";
   } else {
-    input.type = "password";
-    document
-      .getElementById("repeatInput")
-      .classList.replace("fa-eye-slash", "fa-eye");
+    event.target.type = "password";
+    event.target.nextElementSibling.classList.replace("fa-eye-slash", "fa-eye");
   }
 }
 
 document.getElementById("btn").addEventListener("click", checkPass);
-function checkPass() {
-  if (Password.value === repeatPassword.value) {
+function checkPass(event) {
+  if (
+    Password.value === repeatPassword.value &&
+    Password.value !== "" &&
+    repeatPassword.value !== ""
+  ) {
     alert("You are welcome");
+    document.getElementById("error").innerText = "";
   } else {
-    error.innerText = "Нужно ввести одинаковые значения";
+    document.getElementById("error").innerText =
+      "Нужно ввести одинаковые значения";
   }
+  event.preventDefault();
 }
