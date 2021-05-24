@@ -1,12 +1,10 @@
 "use strict";
 
-function showList(list) {
-  let innerArray = [];
+function showList(list, tag) {
+  let parent = document.createElement(tag);
   let outerArray = [];
-  for (let key in list) {
-    innerArray.push(list[key]);
-    outerArray = innerArray.map((listItem) => `<li>${listItem}</li>`).join("");
-  }
-  document.body.innerHTML = `<ul>${outerArray}</ul>`;
+  outerArray = list.map((listItem) => `<li>${listItem}</li>`).join("");
+  parent.innerHTML = `<ul>${outerArray}</ul>`;
+  document.body.append(parent);
 }
-showList(["hello", "world", "Kiev", "Kharkiv", "Odessa", "Lviv"]);
+showList(["hello", "world", "Kiev", "Kharkiv", "Odessa", "Lviv"], "div");

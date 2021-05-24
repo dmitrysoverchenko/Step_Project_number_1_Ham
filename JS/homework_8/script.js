@@ -1,7 +1,7 @@
 "use strict";
 
 const inputArea = document.createElement("input");
-inputArea.type = "text";
+inputArea.type = "number";
 
 const labelArea = document.createElement("label");
 labelArea.innerText = "Price: ";
@@ -16,26 +16,30 @@ inputArea.onfocus = function () {
   this.classList.add("green-line");
 };
 
+let errorText = document.createElement("p");
+errorText.innerText = "";
+document.body.append(errorText);
+
+let priceSpan = document.createElement("p");
+let closeSpan = document.createElement("span");
+
+closeSpan.innerText = "X";
+priceSpan.classList.add("span");
+closeSpan.classList.add("close");
+
 inputArea.onblur = function () {
   this.classList.remove("green-line");
   let priceValue = inputArea.value;
-  let priceSpan = document.createElement("p");
-  let closeSpan = document.createElement("span");
 
-  closeSpan.innerText = "X";
-  priceSpan.classList.add("span");
-  closeSpan.classList.add("close");
-
-  if (+priceValue < 0) {
+  if (+priceValue < 0 || priceValue === "") {
     this.classList.add("red-line");
-    const errorText = document.createElement("p");
     errorText.innerText = "Enter the correct value, please";
-    document.body.append(errorText);
   } else {
     this.classList.remove("red-line");
     priceSpan.innerText = `Current price is ${priceValue}`;
     spanArea.append(priceSpan);
     priceSpan.append(closeSpan);
+    errorText.innerText = "";
   }
 
   closeSpan.addEventListener("click", onclick);
