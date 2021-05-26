@@ -1,15 +1,16 @@
 "use strict";
 
-document.getElementById("Password").addEventListener("click", clickPass);
-document.getElementById("repeatPassword").addEventListener("click", clickPass);
+document.getElementById("Input").addEventListener("click", clickPass);
+document.getElementById("repeatInput").addEventListener("click", clickPass);
 
 function clickPass(event) {
-  if (event.target.type === "password") {
-    event.target.nextElementSibling.classList.replace("fa-eye", "fa-eye-slash");
-    event.target.type = "text";
+  console.log(event.target);
+  if (event.target.previousElementSibling.type === "password") {
+    event.target.classList.replace("fa-eye", "fa-eye-slash");
+    event.target.previousElementSibling.type = "text";
   } else {
-    event.target.type = "password";
-    event.target.nextElementSibling.classList.replace("fa-eye-slash", "fa-eye");
+    event.target.previousElementSibling.type = "password";
+    event.target.classList.replace("fa-eye-slash", "fa-eye");
   }
 }
 
