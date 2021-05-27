@@ -3,16 +3,15 @@
 const btns = document.querySelector(".tabs");
 const items = document.querySelector(".tabs-content");
 
-console.log(btns, items, btns.children.length);
-
 btns.addEventListener("click", function (event) {
-  for (let i = 0; i < btns.children.length; i++) {
-    btns.children[i].classList.remove("active");
-    items.children[i].classList.remove("active");
-    event.target.classList.add("active");
-    items.children[+event.target.getAttribute("data-tab-title")].classList.add(
-      "active"
-    );
+  if (event.target.tagName != "LI") {
+    return;
   }
-  console.log(event.target);
+  document.querySelector(".tabs-title.active").classList.remove("active");
+  document.querySelector(".tab-content.active").classList.remove("active");
+  event.target.classList.add("active");
+  items.children[+event.target.getAttribute("data-tab-title")].classList.add(
+    "active"
+  );
+  console.log(event.target, event.target.tagName);
 });
