@@ -28,5 +28,6 @@ stopBtn.addEventListener("click", () => {
 });
 
 startBtn.addEventListener("click", () => {
+  clearInterval(slider);
   slider = setInterval(showImage, 3000);
 });
