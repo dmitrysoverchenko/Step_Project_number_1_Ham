@@ -47,7 +47,7 @@ body {
   margin-bottom: 50px;
 }
 
-.menu-2 {
+.menu-orange {
   background: #ffa500;
 }
 
@@ -150,10 +150,14 @@ body {
 }
 
 .footer-area {
-  background-color: rgba(99, 105, 110, 0.48);
+  background: rgba(99, 105, 110, 0.48);
   display: flex;
   height: 69px;
   margin-bottom: 30px;
+}
+
+.footer-area-orange {
+  background: rgba(241, 128, 22, 0.48);
 }
 
 .bottom-menu {
