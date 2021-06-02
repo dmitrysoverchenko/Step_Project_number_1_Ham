@@ -1,16 +1,15 @@
 "use strict";
 
+console.log(localStorage.getItem("themeColor"));
+
 document.querySelector(".change-button").addEventListener("click", () => {
   if (localStorage.getItem("themeColor") === "normal") {
-    document.querySelector(".menu").style.backgroundColor = "#ffa24b";
-    document.querySelector(".footer-area").style.backgroundColor = "#ffa24b";
-    document.querySelector(".change-button").style.backgroundColor = "#ffa24b";
-    localStorage.setItem("themeColor", "color");
+    document.querySelector(".menu").classList.add("menu-2");
+    localStorage.setItem("themeColor", "orange");
+    console.log(localStorage.getItem("themeColor"));
   } else {
-    document.querySelector(".menu").style.backgroundColor = "#35444f";
-    document.querySelector(".footer-area").style.backgroundColor =
-      "rgba(99, 105, 110, 0.48)";
-    document.querySelector(".change-button").style.backgroundColor = "#ffffff";
     localStorage.setItem("themeColor", "normal");
+    document.querySelector(".menu").classList.remove("menu-2");
+    console.log(localStorage.getItem("themeColor"));
   }
 });

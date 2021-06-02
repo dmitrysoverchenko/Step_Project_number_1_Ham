@@ -47,6 +47,10 @@ body {
   margin-bottom: 50px;
 }
 
+.menu-2 {
+  background: #ffa500;
+}
+
 .menu-item {
   border-right-style: solid;
   border-right-color: #ffffff;
