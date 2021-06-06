@@ -2,6 +2,19 @@ body {
   font-family: sans-serif;
 }
 
+#toggle {
+  color: #fff;
+  background-color: #89ca62;
+  border: none;
+  width: 70px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+#toggle:hover {
+  cursor: pointer;
+}
+
 #button {
   display: flex;
   align-items: center;

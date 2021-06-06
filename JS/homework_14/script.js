@@ -15,3 +15,16 @@ $("#button").on("click", function () {
 $("#toggle").click(function () {
   $("#hidden-section").slideToggle("slow");
 });
+
+$(document).ready(function () {
+  $(".menu-link").on("click", function () {
+    let anchor = $(this);
+    $("html, body").animate(
+      {
+        scrollTop: $(anchor.attr("href")).offset().top,
+      },
+      1000
+    );
+    e.preventDefault();
+  });
+});
