@@ -2,6 +2,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .banner-wrapper {
   background: url(../img/sections-background/section-1.jpg) fixed center center
     no-repeat;
@@ -219,6 +223,19 @@ body {
   grid-template-columns: repeat(6, 1fr);
 }
 
+.our-services-menu-item-link.active {
+  color: #fff;
+  background-color: #18cfab;
+}
+
+.our-services-menu-item-link.active::after {
+  content: url(../img/Rec-icon.svg);
+  position: absolute;
+  bottom: -26px;
+  right: 82px;
+  display: block;
+}
+
 .our-services-menu-item-link {
   display: block;
   text-align: center;
@@ -232,30 +249,21 @@ body {
   text-decoration: none;
   text-transform: capitalize;
   position: relative;
-}
-
-.our-services-menu-item-link::after {
-  content: url(../img/Rec-icon.svg);
-  position: absolute;
-  bottom: -26px;
-  right: 82px;
-  display: none;
+  cursor: pointer;
 }
 
 .our-services-menu-item-link:hover {
   border: 1.5px solid #18cfab;
 }
 
-.our-services-menu-item-link:focus {
-  color: #fff;
-  background-color: #18cfab;
-}
-
-a.our-services-menu-item-link:focus::after {
-  display: block;
-}
-
 .our-services-description {
+  display: none;
+  padding-top: 13px;
+  align-items: center;
+  padding-bottom: 91px;
+}
+
+.our-services-description.active {
   display: flex;
   padding-top: 13px;
   align-items: center;
@@ -314,7 +322,7 @@ a.our-services-menu-item-link:focus::after {
   padding-bottom: 71px;
 }
 
-.our-amazing-work-menu-item:first-child a {
+.our-amazing-work-menu-item-link:first-child {
   padding-left: 28px;
   padding-right: 28px;
 }
@@ -328,12 +336,10 @@ a.our-services-menu-item-link:focus::after {
   text-decoration: none;
   text-transform: capitalize;
   color: #717171;
+  cursor: pointer;
 }
 
-.our-amazing-work-menu-item-link:visited {
-  color: #717171;
-}
-
+.our-amazing-work-menu-item-link.active,
 .our-amazing-work-menu-item-link:hover {
   color: #18cfab;
   border: 2px solid #18cfab;
