@@ -495,6 +495,14 @@ body {
   padding-bottom: 91px;
 }
 
+.slide-content {
+  display: none;
+}
+
+.slide-content.active {
+  display: block;
+}
+
 .quotes {
   background: url(../img/sections-background/section-3.jpg);
 }
@@ -544,6 +552,10 @@ body {
   margin: 0 8px;
 }
 
+.other-quote-author-photo.active {
+  transform: translateY(-10px);
+}
+
 .other-quotes {
   padding-top: 57px;
   display: flex;
@@ -575,10 +587,6 @@ body {
 
 .button-forward:hover .button-forward-color {
   fill: #fff;
-}
-
-.other-quotes-author:hover {
-  transform: translateY(-10px);
 }
 
 .gal-8 {

@@ -25,7 +25,7 @@ ourServicesItem.addEventListener("click", function (event) {
 
 const ourWork = document.querySelector(".our-amazing-work-menu");
 let ourWorkItems = document.querySelectorAll(".our-amazing-work-grid-item");
-console.log(ourWorkItems);
+// console.log(ourWorkItems);
 
 ourWork.addEventListener("click", function (event) {
   if (event.target.tagName != "LI") {
@@ -94,3 +94,56 @@ function mixImage(array) {
     array[j] = temp;
   }
 }
+
+//SLIDER
+
+const slideItem = document.querySelector(".other-quotes");
+const slideContent = document.querySelector(".slide-content-area");
+
+console.log(slideItem);
+console.log(slideContent);
+
+slideItem.addEventListener("click", function (event) {
+  if (event.target.tagName != "IMG") {
+    return;
+  }
+  document
+    .querySelector(".other-quote-author-photo.active")
+    .classList.remove("active");
+  document.querySelector(".slide-content.active").classList.remove("active");
+  event.target.classList.add("active");
+  slideContent.children[
+    +event.target.getAttribute("data-position")
+  ].classList.add("active");
+  console.log(
+    +document
+      .querySelector(".other-quote-author-photo.active")
+      .getAttribute("data-position")
+  );
+});
+
+document.querySelector(".button-forward").addEventListener("click", () => {
+  if (
+    +document
+      .querySelector(".other-quote-author-photo.active")
+      .getAttribute("data-position") >= 0 &&
+    +document
+      .querySelector(".other-quote-author-photo.active")
+      .getAttribute("data-position") < 3
+  ) {
+    console.log(`hello`);
+  }
+});
+
+document.querySelector(".button-back").addEventListener("click", () => {
+  if (
+    +document
+      .querySelector(".other-quote-author-photo.active")
+      .getAttribute("data-position") > 0 &&
+    +document
+      .querySelector(".other-quote-author-photo.active")
+      .getAttribute("data-position") <= 3
+  ) {
+    console.log(`bye`);
+  }
+});
