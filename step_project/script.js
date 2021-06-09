@@ -47,3 +47,11 @@ ourWork.addEventListener("click", function (event) {
     }
   });
 });
+
+document.querySelector(".load-more").addEventListener("click", () => {
+  const workItem = document
+    .querySelector(".our-amazing-work-grid-item")
+    .cloneNode(true);
+  console.log(workItem);
+  document.querySelector(".our-amazing-work-grid").append(workItem);
+});
