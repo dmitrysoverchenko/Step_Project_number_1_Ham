@@ -1,7 +1,7 @@
 "use strict";
 
 $(window).scroll(function () {
-  if ($(window).scrollTop() > 300) {
+  if ($(window).scrollTop() > $(window).height()) {
     $("#button").addClass("show");
   } else {
     $("#button").removeClass("show");
