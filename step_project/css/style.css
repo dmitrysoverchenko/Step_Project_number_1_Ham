@@ -550,6 +550,7 @@ body {
   border-radius: 50%;
   border: 5px solid rgba(31, 218, 181, 0.2);
   margin: 0 8px;
+  cursor: pointer;
 }
 
 .other-quote-author-photo.active {

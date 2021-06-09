@@ -115,12 +115,10 @@ slideItem.addEventListener("click", function (event) {
   slideContent.children[
     +event.target.getAttribute("data-position")
   ].classList.add("active");
-  console.log(
-    +document
-      .querySelector(".other-quote-author-photo.active")
-      .getAttribute("data-position")
-  );
 });
+
+const photoArea = document.querySelector(".photo-area");
+console.log(photoArea);
 
 document.querySelector(".button-forward").addEventListener("click", () => {
   if (
@@ -131,7 +129,15 @@ document.querySelector(".button-forward").addEventListener("click", () => {
       .querySelector(".other-quote-author-photo.active")
       .getAttribute("data-position") < 3
   ) {
-    console.log(`hello`);
+    document.querySelector(".slide-content.active").classList.remove("active");
+    let number = +document
+      .querySelector(".other-quote-author-photo.active")
+      .getAttribute("data-position");
+    photoArea.children[number + 1].classList.add("active");
+    slideContent.children[
+      +photoArea.children[number + 1].getAttribute("data-position")
+    ].classList.add("active");
+    photoArea.children[number].classList.remove("active");
   }
 });
 
@@ -144,6 +150,14 @@ document.querySelector(".button-back").addEventListener("click", () => {
       .querySelector(".other-quote-author-photo.active")
       .getAttribute("data-position") <= 3
   ) {
-    console.log(`bye`);
+    document.querySelector(".slide-content.active").classList.remove("active");
+    let number = +document
+      .querySelector(".other-quote-author-photo.active")
+      .getAttribute("data-position");
+    photoArea.children[number - 1].classList.add("active");
+    slideContent.children[
+      +photoArea.children[number - 1].getAttribute("data-position")
+    ].classList.add("active");
+    photoArea.children[number].classList.remove("active");
   }
 });
