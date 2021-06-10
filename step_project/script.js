@@ -107,6 +107,14 @@ slideItem.addEventListener("click", function (event) {
   if (event.target.tagName != "IMG") {
     return;
   }
+  document.querySelector(".button-back").classList.remove("hidden");
+  document.querySelector(".button-forward").classList.remove("hidden");
+  if (+event.target.getAttribute("data-position") === 0) {
+    document.querySelector(".button-back").classList.add("hidden");
+  }
+  if (+event.target.getAttribute("data-position") === 3) {
+    document.querySelector(".button-forward").classList.add("hidden");
+  }
   document
     .querySelector(".other-quote-author-photo.active")
     .classList.remove("active");
@@ -120,15 +128,14 @@ slideItem.addEventListener("click", function (event) {
 const photoArea = document.querySelector(".photo-area");
 console.log(photoArea);
 
-document.querySelector(".button-forward").addEventListener("click", () => {
+document.querySelector(".button-forward").addEventListener("click", (event) => {
+  console.log(event.target);
   if (
-    +document
-      .querySelector(".other-quote-author-photo.active")
-      .getAttribute("data-position") >= 0 &&
     +document
       .querySelector(".other-quote-author-photo.active")
       .getAttribute("data-position") < 3
   ) {
+    document.querySelector(".button-back").classList.remove("hidden");
     document.querySelector(".slide-content.active").classList.remove("active");
     let number = +document
       .querySelector(".other-quote-author-photo.active")
@@ -139,17 +146,23 @@ document.querySelector(".button-forward").addEventListener("click", () => {
     ].classList.add("active");
     photoArea.children[number].classList.remove("active");
   }
-});
-
-document.querySelector(".button-back").addEventListener("click", () => {
   if (
     +document
       .querySelector(".other-quote-author-photo.active")
-      .getAttribute("data-position") > 0 &&
+      .getAttribute("data-position") === 3
+  ) {
+    document.querySelector(".button-forward").classList.add("hidden");
+  }
+});
+
+document.querySelector(".button-back").addEventListener("click", (event) => {
+  console.log(event.target);
+  if (
     +document
       .querySelector(".other-quote-author-photo.active")
-      .getAttribute("data-position") <= 3
+      .getAttribute("data-position") > 0
   ) {
+    document.querySelector(".button-forward").classList.remove("hidden");
     document.querySelector(".slide-content.active").classList.remove("active");
     let number = +document
       .querySelector(".other-quote-author-photo.active")
@@ -160,4 +173,15 @@ document.querySelector(".button-back").addEventListener("click", () => {
     ].classList.add("active");
     photoArea.children[number].classList.remove("active");
   }
+  if (
+    +document
+      .querySelector(".other-quote-author-photo.active")
+      .getAttribute("data-position") === 0
+  ) {
+    document.querySelector(".button-back").classList.add("hidden");
+  }
 });
+
+// function hiddenBackButton (){
+
+// }
