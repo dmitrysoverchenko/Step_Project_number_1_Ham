@@ -268,6 +268,8 @@ body {
   padding-top: 13px;
   align-items: center;
   padding-bottom: 91px;
+  -webkit-animation: emersion 2s linear; /* Safari */
+  animation: emersion 2s linear;
 }
 
 .our-services-description p {
@@ -349,6 +351,8 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding-bottom: 83px;
+  -webkit-animation: emersion 2s linear; /* Safari */
+  animation: emersion 2s linear;
 }
 
 .our-amazing-work-grid-item {
@@ -401,25 +405,6 @@ body {
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
   margin: 0 auto;
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 .load-more {
@@ -535,31 +520,6 @@ body {
   display: block;
   -webkit-animation: emersion 2s linear; /* Safari */
   animation: emersion 2s linear;
-}
-
-/* Safari */
-@-webkit-keyframes emersion {
-  0% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes emersion {
-  0% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .quotes {
@@ -697,4 +657,48 @@ body {
 
 .text-accent-not-bold {
   color: #18cfab;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Safari */
+@-webkit-keyframes emersion {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes emersion {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -102,36 +102,36 @@ function mixImage(array) {
 
 //SLIDER
 
-let hero = 0;
+let author = 0;
 $(function carousel() {
-  function moveTo(hero) {
-    $(".photo-area img").removeClass("active").eq(hero).addClass("active");
+  function moveTo(author) {
+    $(".photo-area img").removeClass("active").eq(author).addClass("active");
     $(".slide-content-area div")
       .removeClass("active")
-      .eq(hero)
+      .eq(author)
       .addClass("active");
   }
 
   $(".button-back").click(function () {
-    hero = $(".photo-area img.active").index();
-    if (hero == 0) {
-      hero = 4;
+    author = $(".photo-area img.active").index();
+    if (author == 0) {
+      author = 4;
     }
-    hero -= 1;
-    moveTo(hero);
+    author -= 1;
+    moveTo(author);
   });
 
   $(".button-forward").click(function () {
-    hero = $(".photo-area img.active").index();
-    if (hero == 3) {
-      hero = -1;
+    author = $(".photo-area img.active").index();
+    if (author == 3) {
+      author = -1;
     }
-    hero += 1;
-    moveTo(hero);
+    author += 1;
+    moveTo(author);
   });
 
   $(".photo-area img").click(function () {
-    hero = $(this).index();
-    moveTo(hero);
+    author = $(this).index();
+    moveTo(author);
   });
 });
