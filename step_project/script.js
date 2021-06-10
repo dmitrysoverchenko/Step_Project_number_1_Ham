@@ -102,82 +102,36 @@ function mixImage(array) {
 
 //SLIDER
 
-const slideItem = document.querySelector(".other-quotes");
-const slideContent = document.querySelector(".slide-content-area");
-const photoArea = document.querySelector(".photo-area");
+let hero = 0;
+$(function carousel() {
+  function moveTo(hero) {
+    $(".photo-area img").removeClass("active").eq(hero).addClass("active");
+    $(".slide-content-area div")
+      .removeClass("active")
+      .eq(hero)
+      .addClass("active");
+  }
 
-slideItem.addEventListener("click", function (event) {
-  if (event.target.tagName != "IMG") {
-    return;
-  }
-  document.querySelector(".button-back").classList.remove("hidden");
-  document.querySelector(".button-forward").classList.remove("hidden");
-  if (+event.target.getAttribute("data-position") === 0) {
-    document.querySelector(".button-back").classList.add("hidden");
-  }
-  if (+event.target.getAttribute("data-position") === 3) {
-    document.querySelector(".button-forward").classList.add("hidden");
-  }
-  document
-    .querySelector(".other-quote-author-photo.active")
-    .classList.remove("active");
-  document.querySelector(".slide-content.active").classList.remove("active");
-  event.target.classList.add("active");
-  slideContent.children[
-    +event.target.getAttribute("data-position")
-  ].classList.add("active");
-});
+  $(".button-back").click(function () {
+    hero = $(".photo-area img.active").index();
+    if (hero == 0) {
+      hero = 4;
+    }
+    hero -= 1;
+    moveTo(hero);
+  });
 
-document.querySelector(".button-forward").addEventListener("click", (event) => {
-  console.log(event.target);
-  if (
-    +document
-      .querySelector(".other-quote-author-photo.active")
-      .getAttribute("data-position") < 3
-  ) {
-    document.querySelector(".button-back").classList.remove("hidden");
-    document.querySelector(".slide-content.active").classList.remove("active");
-    let number = +document
-      .querySelector(".other-quote-author-photo.active")
-      .getAttribute("data-position");
-    photoArea.children[number + 1].classList.add("active");
-    slideContent.children[
-      +photoArea.children[number + 1].getAttribute("data-position")
-    ].classList.add("active");
-    photoArea.children[number].classList.remove("active");
-  }
-  if (
-    +document
-      .querySelector(".other-quote-author-photo.active")
-      .getAttribute("data-position") === 3
-  ) {
-    document.querySelector(".button-forward").classList.add("hidden");
-  }
-});
+  $(".button-forward").click(function () {
+    hero = $(".photo-area img.active").index();
+    if (hero == 3) {
+      hero = -1;
+    }
+    hero += 1;
+    moveTo(hero);
+  });
 
-document.querySelector(".button-back").addEventListener("click", (event) => {
-  console.log(event.target);
-  if (
-    +document
-      .querySelector(".other-quote-author-photo.active")
-      .getAttribute("data-position") > 0
-  ) {
-    document.querySelector(".button-forward").classList.remove("hidden");
-    document.querySelector(".slide-content.active").classList.remove("active");
-    let number = +document
-      .querySelector(".other-quote-author-photo.active")
-      .getAttribute("data-position");
-    photoArea.children[number - 1].classList.add("active");
-    slideContent.children[
-      +photoArea.children[number - 1].getAttribute("data-position")
-    ].classList.add("active");
-    photoArea.children[number].classList.remove("active");
-  }
-  if (
-    +document
-      .querySelector(".other-quote-author-photo.active")
-      .getAttribute("data-position") === 0
-  ) {
-    document.querySelector(".button-back").classList.add("hidden");
-  }
+  $(".photo-area img").click(function () {
+    hero = $(this).index();
+    moveTo(hero);
+  });
 });

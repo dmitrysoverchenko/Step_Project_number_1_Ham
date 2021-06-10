@@ -6,10 +6,12 @@ let position = 1; //0,1,2,3
 const stopBtn = document.querySelector(".stop");
 const startBtn = document.querySelector(".start");
 
-let slider = setInterval(showImage, 3000);
+// let slider = setInterval(showImage, 3000);
+
+console.log(showImage());
 
 function showImage() {
-  console.log(position); //ok
+  console.log(position, images); //ok
   images.forEach((element, index) => {
     console.log(element); //ok
     element.classList.remove("show");
