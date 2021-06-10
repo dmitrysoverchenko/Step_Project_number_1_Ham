@@ -25,7 +25,6 @@ ourServicesItem.addEventListener("click", function (event) {
 
 const ourWork = document.querySelector(".our-amazing-work-menu");
 let ourWorkItems = document.querySelectorAll(".our-amazing-work-grid-item");
-// console.log(ourWorkItems);
 
 ourWork.addEventListener("click", function (event) {
   if (event.target.tagName != "LI") {
@@ -81,9 +80,15 @@ function loadImage() {
 }
 
 document.querySelector(".load-more").addEventListener("click", () => {
-  document.querySelector(".our-amazing-work-grid").append(...loadImage());
   document.querySelector(".load-more").remove();
-  ourWorkItems = document.querySelectorAll(".our-amazing-work-grid-item");
+  document.querySelector(".loader").classList.toggle("hidden");
+  setTimeout(() => {
+    ourWorkItems = document.querySelectorAll(".our-amazing-work-grid-item");
+    document.querySelector(".loader").classList.toggle("hidden");
+    document.querySelector(".load-more-button").remove();
+    document.querySelector(".our-amazing-work-grid").append(...loadImage());
+    ourWorkItems = document.querySelectorAll(".our-amazing-work-grid-item");
+  }, 2000);
 });
 
 function mixImage(array) {
@@ -99,9 +104,7 @@ function mixImage(array) {
 
 const slideItem = document.querySelector(".other-quotes");
 const slideContent = document.querySelector(".slide-content-area");
-
-console.log(slideItem);
-console.log(slideContent);
+const photoArea = document.querySelector(".photo-area");
 
 slideItem.addEventListener("click", function (event) {
   if (event.target.tagName != "IMG") {
@@ -124,9 +127,6 @@ slideItem.addEventListener("click", function (event) {
     +event.target.getAttribute("data-position")
   ].classList.add("active");
 });
-
-const photoArea = document.querySelector(".photo-area");
-console.log(photoArea);
 
 document.querySelector(".button-forward").addEventListener("click", (event) => {
   console.log(event.target);
@@ -181,7 +181,3 @@ document.querySelector(".button-back").addEventListener("click", (event) => {
     document.querySelector(".button-back").classList.add("hidden");
   }
 });
-
-// function hiddenBackButton (){
-
-// }
