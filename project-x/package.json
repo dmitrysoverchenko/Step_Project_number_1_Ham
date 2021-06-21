@@ -1,0 +1,29 @@
+{
+  "name": "project-x",
+  "version": "1.0.0",
+  "description": "Project by Dmitry Soverchenko from FE-1 group",
+  "main": "app,js",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/isoverchenko/soverchenko_study.git"
+  },
+  "author": "Dmitry Soverchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/isoverchenko/soverchenko_study/issues"
+  },
+  "homepage": "https://gitlab.com/isoverchenko/soverchenko_study#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "eslint": "^7.29.0",
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "moment": "^2.29.1"
+  }
+}
