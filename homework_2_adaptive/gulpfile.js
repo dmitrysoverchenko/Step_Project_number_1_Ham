@@ -31,7 +31,7 @@ function jsBuild() {
 }
 
 function imageBuild() {
-  return src("./src/image/**")
+  return src("./src/img/**")
     .pipe(
       imageMin([
         imageMin.gifsicle({ interlaced: true }),
@@ -42,7 +42,7 @@ function imageBuild() {
         }),
       ])
     )
-    .pipe(dest("./dist/image/"));
+    .pipe(dest("./dist/img/"));
 }
 
 function htmlBuild() {
