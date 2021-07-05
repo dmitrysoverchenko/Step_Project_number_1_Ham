@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  img {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  background: rgba(0, 0, 0, 0.0001);
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1165px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 27px 0;
+}
+
+.menu__item {
+  padding: 18px 0;
+}
+
+.menu__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 22px;
+  letter-spacing: 1.1px;
+  color: #4e4e4e;
+  &--active {
+    color: #57a4a4;
+  }
+}
