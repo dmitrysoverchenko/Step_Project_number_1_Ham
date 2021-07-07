@@ -104,6 +104,9 @@
     width: 100%;
     flex-direction: column;
     gap: 0;
+    &--invisible {
+      display: none;
+    }
   }
 
   .posts__description {
