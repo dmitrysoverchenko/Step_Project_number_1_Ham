@@ -60,11 +60,5 @@ function watcher() {
   });
 }
 
-exports.cleanDist = cleanDist;
-exports.scssBuild = scssBuild;
-exports.jsBuild = jsBuild;
-exports.imageBuild = imageBuild;
-exports.htmlBuild = htmlBuild;
-exports.watcher = watcher;
 exports.dev = watcher;
 exports.build = series(cleanDist, htmlBuild, scssBuild, jsBuild, imageBuild);

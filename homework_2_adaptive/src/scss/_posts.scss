@@ -72,7 +72,7 @@
 }
 
 @media (max-width: 1199px) {
-  .page__section {
+  .page-section {
     padding: 66px 80px;
   }
 
@@ -91,9 +91,9 @@
   }
 }
 
-@media (max-width: 767px) {
-  .page__section {
-    padding: 30px 26px;
+@media (max-width: 768px) {
+  .page-section {
+    padding: 30px 28px;
   }
 
   .page-section__title {
@@ -102,27 +102,33 @@
 
   .posts__item {
     width: 100%;
-    flex-direction: column;
     gap: 0;
-    &--invisible {
-      display: none;
-    }
+    // &--invisible {
+    //   // display: none;
+    // }
   }
 
   .posts__description {
     width: 100%;
-    padding: 0;
+    padding: 0 0 0 20px;
   }
 
   .posts__description-title {
-    padding: 11px 0 0 0;
     font-size: 14px;
   }
 
   .posts__description-comment {
     font-size: 11px;
   }
+}
 
+@media (max-width: 580px) {
+  .posts__item {
+    flex-direction: column;
+  }
+  .posts__description {
+    padding: 0;
+  }
   .posts__description-content {
     display: none;
   }
