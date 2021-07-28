@@ -1,0 +1,135 @@
+.page-section {
+  max-width: 1200px;
+  padding: 66px 15px;
+  margin: 0 auto;
+}
+
+.page-section__title {
+  color: $color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  &::before {
+    content: "-";
+    padding-right: 5px;
+  }
+}
+
+.page-section__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 24px;
+}
+
+.posts__item {
+  width: 50%;
+  display: flex;
+  margin-bottom: 32px;
+  &:nth-child(odd) {
+    padding: 0 12px 0 0;
+  }
+  &:nth-child(even) {
+    padding: 0 0 0 12px;
+  }
+}
+
+.posts__image {
+  width: 160px;
+  & > img {
+    width: 100%;
+  }
+}
+
+.posts__description {
+  width: calc(100% - 160px);
+  padding: 0 0 0 20px;
+}
+
+.posts__description-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: $color;
+  padding-bottom: 1px;
+}
+
+.posts__description-comment {
+  color: rgba(124, 124, 124, 1);
+  font-size: 12px;
+  line-height: 20px;
+  padding-bottom: 13px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.posts__description-content {
+  font-size: 14px;
+  line-height: 26px;
+  color: $color;
+}
+
+@media (max-width: 1199px) {
+  .page-section {
+    padding: 66px 80px;
+  }
+
+  .posts__item {
+    min-width: 90%;
+    &:nth-child(odd) {
+      padding: 0;
+    }
+    &:nth-child(even) {
+      padding: 0;
+    }
+  }
+
+  .posts__content {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-section {
+    padding: 30px 28px;
+  }
+
+  .page-section__title {
+    font-size: 14px;
+  }
+
+  .posts__item {
+    width: 100%;
+    gap: 0;
+    // &--invisible {
+    //   // display: none;
+    // }
+  }
+
+  .posts__description {
+    width: 100%;
+    padding: 0 0 0 20px;
+  }
+
+  .posts__description-title {
+    font-size: 14px;
+  }
+
+  .posts__description-comment {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 580px) {
+  .posts__item {
+    flex-direction: column;
+  }
+  .posts__description {
+    padding: 0;
+  }
+  .posts__description-content {
+    display: none;
+  }
+}
