@@ -1,0 +1,245 @@
+.header {
+  padding: 31px 0;
+  position: relative;
+  background-color: #000;
+}
+
+.header__navigation {
+  display: grid;
+  grid-template-columns: 21% 52% 16%;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  &-text {
+    color: $headerColor;
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 16px;
+    padding-left: 17px;
+    text-transform: uppercase;
+  }
+  &:hover &-text {
+    color: #fff;
+  }
+  &:hover &-image {
+    content: url("../img/header/logo-hover.png");
+  }
+}
+
+.menu {
+  @include montserratBold;
+  display: flex;
+  justify-self: end;
+  font-size: 16px;
+  line-height: 15px;
+  &__item {
+    padding-left: 48px;
+  }
+  &__item:hover &__link {
+    color: #fff;
+  }
+  &__link {
+    color: $headerColor;
+    text-decoration: none;
+    &:focus {
+      color: #fff;
+    }
+  }
+}
+
+.button {
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  background-color: $headerColor;
+  color: white;
+  border-radius: 20px;
+  @include montserratBold;
+  text-transform: capitalize;
+  font-size: 16px;
+  line-height: 17px;
+  justify-self: end;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: $headerColor;
+}
+
+@media screen and (max-width: 1199px) {
+  .menu__link {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 481px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    padding: 22px 0;
+    background-color: #27262a;
+  }
+
+  .header__navigation {
+    grid-template-areas:
+      "logo button"
+      "menu menu";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60% 40%;
+  }
+  .header__logo {
+    grid-area: logo;
+  }
+
+  .header__button {
+    grid-area: button;
+  }
+
+  .header__menu {
+    grid-area: menu;
+    justify-self: center;
+    padding-top: 23px;
+    line-height: 18px;
+  }
+
+  .menu__item {
+    padding-left: 0;
+    padding: 0 6px;
+  }
+
+  .menu__link {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__navigation {
+    grid-template-areas: "logo button menu";
+    grid-template-columns: 20% 60% 20%;
+  }
+
+  .header__logo {
+    grid-area: logo;
+    &-text {
+      display: none;
+    }
+  }
+
+  .header__menu {
+    display: none;
+    &.active {
+      display: block;
+      width: 290px;
+      background-color: #333;
+      padding-bottom: 11px;
+      position: absolute;
+      top: 105px;
+      right: 15px;
+      z-index: 1;
+    }
+  }
+
+  .header__button {
+    grid-area: button;
+    padding: 10px 30px;
+    font-size: 15px;
+    line-height: 15px;
+    justify-self: center;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .header {
+    padding: 32px 0;
+    background-color: #27262a;
+    position: relative;
+  }
+
+  .menu__item {
+    padding-left: 0;
+  }
+
+  .menu__link {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 29px 0 29px 34px;
+    border-bottom: 2px solid #3b3b3b;
+    font-size: 26px;
+    line-height: 26px;
+    position: relative;
+    @include montserratReg;
+
+    &:focus::before {
+      content: "";
+      width: 8px;
+      height: 53px;
+      background-color: $headerColor;
+      position: absolute;
+      top: 19px;
+      left: 0;
+    }
+
+    &:focus {
+      color: $headerColor;
+    }
+  }
+
+  .menu__mobile {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: 41px;
+    right: 15px;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 3px;
+      width: 26px;
+      background-color: #fff;
+      position: absolute;
+      top: 20px;
+      right: 0;
+      border-radius: 20px;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 3px;
+      width: 26px;
+      background-color: #fff;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      border-radius: 20px;
+    }
+    &.active {
+      width: 0;
+      height: 0;
+      &::after {
+        transform: rotate(-45deg);
+        top: 10px;
+      }
+      &::before {
+        transform: rotate(45deg);
+        top: 10px;
+      }
+    }
+  }
+}

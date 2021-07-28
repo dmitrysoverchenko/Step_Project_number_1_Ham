@@ -1,0 +1,25 @@
+@mixin MontserratBold {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+}
+
+@mixin MontserratReg {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+@mixin LatoBold {
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 700;
+}
+
+@mixin LatoItalicBold {
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@mixin LatoReg {
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+}
