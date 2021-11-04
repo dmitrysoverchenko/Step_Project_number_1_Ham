@@ -3,3 +3,5 @@ Landing with dynamic elements (vanilla JS) [layout](https://www.figma.com/file/D
 This landing page was made for widescreen displays (1200 px and more) without responsive layout
 
 Used technologies: HTML, CSS, JS
+
+https://dmitrysoverchenko.github.io/The-Ham/ on github pages
