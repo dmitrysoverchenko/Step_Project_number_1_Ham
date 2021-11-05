@@ -4,4 +4,4 @@ This landing page was made for widescreen displays (1200 px and more) without re
 
 Used technologies: HTML, CSS, JS
 
-https://dmitrysoverchenko.github.io/The-Ham/ on github pages
+https://dmitrysoverchenko.github.io/The-Ham/ on GitHub pages
